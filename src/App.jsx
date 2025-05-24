@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Boneco from "./assets/Boneco.png";
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="app">
+      <header className="header">
+        <nav className="nav">
+          <h1 className="logo">Julia Becho</h1>
+          <div className="nav-links">
+            <a href="#">About me</a>
+            <a href="#">Projects</a>
+            <button className="icon-button">☰</button>
+          </div>
+        </nav>
+        <img src={Boneco} alt="Boneco" className="hero-image" />
+      </header>
+
+      <main className="intro-section">
+        <h1>Welcome to My Personal Portfolio!</h1>
+        <h2>Full-Stack Developer with a Passion for Front-End & UX/UI Design</h2>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Hi, I’m Julia — a full-stack web developer with a strong focus on front-end development and a true passion for UX/UI design. I love creating user-friendly, visually appealing digital experiences that combine clean code with thoughtful design.
+          <br /><br />
+          While I’m skilled across the full stack, I naturally gravitate toward the front end, where creativity meets functionality. With experience in UX/UI, I enjoy designing interfaces that are both beautiful and intuitive.
+          <br /><br />
+          Feel free to explore my work, and don’t hesitate to reach out if you’d like to connect or collaborate!
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;

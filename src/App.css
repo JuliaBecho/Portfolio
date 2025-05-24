@@ -1,42 +1,75 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+.app {
   text-align: center;
 }
 
+.header {
+  background: radial-gradient(circle at top, #122840 0%, #0d1b2a 100%);
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: 1.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-links a,
+.icon-button {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+.hero-image {
+  position: absolute;
+  right: 3rem;
+  bottom: -3rem;
+  width: 150px;
 }
 
-.read-the-docs {
-  color: #888;
+.intro-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.intro-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.intro-section p {
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: justify;
 }
