@@ -1,0 +1,51 @@
+.app {
+  
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 2rem;
+ 
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  min-height: 90vh;
+}
+
+.intro-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.intro-text h1 {
+  font-size: 3.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.intro-text h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.highlight {
+  color: #4da6ff;
+}
+
+.hero-img {
+  width: 500px;
+  max-width: 100%;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

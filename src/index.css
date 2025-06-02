@@ -1,0 +1,11 @@
+:root{
+    --color-text-grey: #949AA1
+}
+
+
+body {
+    margin: 0;
+    font-family: "Jersey 20", sans-serif;
+    background-color: #111;
+    color: var(--color-text-grey);
+  }

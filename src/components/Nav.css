@@ -1,0 +1,35 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .nav-links a,
+  .icon-button {
+    color: var(--color-text-grey);
+    text-decoration: none;
+    font-weight: 500;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .hero-image {
+    position: absolute;
+    right: 3rem;
+    bottom: -3rem;
+    width: 150px;
+  }
