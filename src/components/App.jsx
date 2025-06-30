@@ -3,6 +3,7 @@ import Header from "./Header";
 import Nav from './Nav';
 import astronauta from "../assets/astronalta.png";
 import { StarBackground } from './StarBackground';
+import { Contact } from './contact';
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
      <StarBackground></StarBackground>
     <Header> </Header>
     <Nav></Nav>
+    <Contact></Contact>
+
     
     <main className="intro-section">
         <div className="intro-text">
