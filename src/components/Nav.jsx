@@ -1,5 +1,6 @@
 
 import './Nav.css'
+import sun from "../assets/sun.png";
 
 export default function Nav() {
 return(
@@ -12,7 +13,7 @@ return(
             <a href="#">Skills</a>
             <a href="#">Project</a>
             <a href="#"><span className="highlight">Contact</span></a>
-           
+           <a href="#"><img src={sun} alt="Sun" className="button-img" /></a>
           </div>
         </nav>
 

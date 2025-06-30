@@ -2,14 +2,16 @@ import './App.css';
 import Header from "./Header";
 import Nav from './Nav';
 import astronauta from "../assets/astronalta.png";
+import { StarBackground } from './StarBackground';
 
 
 function App() {
   return (
 
 
-    <div className="app">
+    <div className="app min-h-screen bg-background text-foreground overflow-x-hidden">
      
+     <StarBackground></StarBackground>
     <Header> </Header>
     <Nav></Nav>
     
