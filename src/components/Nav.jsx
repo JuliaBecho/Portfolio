@@ -1,6 +1,6 @@
 
 import './Nav.css'
-import sun from "../assets/sun.png";
+import sun from "@/assets/sun.png";
 
 export default function Nav() {
 return(
