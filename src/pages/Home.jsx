@@ -4,11 +4,14 @@ import Nav from '@/components/Nav';
 import astronauta from "@/assets/astronalta.png";
 import { StarBackground } from '@/components/StarBackground';
 import { Contact } from '@/components/Contact';
-
+import jellyfish from "@/assets/Jellyfish.png"
 import { Typewriter } from 'react-simple-typewriter';
+import { useTheme } from '@/contexts/ThemeContext';
 
 
 function Home() {
+  const {theme}=useTheme();
+
   return (
 
 
@@ -39,7 +42,13 @@ function Home() {
           
             </span></h2>
         </div>
-        <img src={astronauta} alt="Astronauta" className="hero-img" />
+            {
+              theme === "dark" ? (
+                <img src={astronauta} alt="Astronauta" className="hero-img" />
+              ) : (
+                <img src={jellyfish} alt="jellyfish" className="hero-img light" />
+              )
+            }
       </main>
 
      <Contact></Contact>
