@@ -7,6 +7,7 @@ import { Contact } from '@/components/Contact';
 import jellyfish from "@/assets/Jellyfish.png"
 import { Typewriter } from 'react-simple-typewriter';
 import { useTheme } from '@/contexts/ThemeContext';
+import BubbleBackground from '../components/bubblesBackground';
 
 
 function Home() {
@@ -17,7 +18,10 @@ function Home() {
 
     <div className="app min-h-screen bg-background text-foreground overflow-x-hidden">
      
-     <StarBackground></StarBackground>
+    {
+      theme === "light" ? <BubbleBackground/> : <StarBackground/>
+    }
+    
     <Header> </Header>
     <Nav></Nav>
 
