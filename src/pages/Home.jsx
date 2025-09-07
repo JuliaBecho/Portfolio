@@ -8,6 +8,8 @@ import jellyfish from "@/assets/Jellyfish.png"
 import { Typewriter } from 'react-simple-typewriter';
 import { useTheme } from '@/contexts/ThemeContext';
 import BubbleBackground from '../components/bubblesBackground';
+import AboutMe from '../components/AboutMe';
+import Skills from "@/components/Skills"
 
 
 function Home() {
@@ -55,6 +57,8 @@ function Home() {
             }
       </main>
 
+      <AboutMe/>
+      <Skills/>
      <Contact></Contact>
 
     </div>
