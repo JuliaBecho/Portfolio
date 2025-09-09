@@ -48,8 +48,8 @@ function Skills() {
         <div className="flex flex-wrap justify-center items-center gap-8 max-w-5xl mx-auto">
           {filtredSkills.map((skill, key) => (
             <div key={key} className="skill-circle group cursor-pointer">
-              <div className="relative w-32 h-32 md:w-36 lg:W-40 lg:h-40">
-                {/* <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border-4 border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300 shadow-lg group-hover:shadow-blue-500/20"></div> */}
+              <div className="relative w-32 h-32 md:w-36 lg:w-40 lg:h-40">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border-4 border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300 shadow-lg group-hover:shadow-blue-500/20"></div>
 
                 <svg
                   className="absolute inset-0 w-full h-full transform -rotate-90"
