@@ -1,4 +1,3 @@
-import Notfoundimage from '@/assets/notfoundimage.png'; 
 import astronautspace from '@/assets/astronautspace.gif'; 
 import './Notfound.css';
 
