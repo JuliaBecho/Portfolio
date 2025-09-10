@@ -4,27 +4,38 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 import './Contact.css'; // CSS separado
 
+function encode(data) {
+  return new URLSearchParams(data).toString();
+}
+
 export const Contact = () => {
-  const form = useRef();
+  const formRef = useRef();
 
   const sendEmail = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form.current);
+     e.preventDefault();
+
+     const form = formRef.current;
+     const formData = new FormData(form);
+     const data = Object.fromEntries(formData.entries());
+
 
     try {
-      const response = await axios.post(
-        "https://formsubmit.co/bc26973229b7dfcf8e67770facc8cd41",
-        formData,
-        {
-          headers: { 'Content-type': 'multipart/form-data' }
-        }
-      );
+      await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-type": "applications/x-www-form-utlencoded",
+        },
+        body: encode({"form-name":"contact", ...data})
+      })
 
       Swal.fire({
         title: "Message was sent!",
         icon: "success",
         draggable: true
       });
+
+      form.reset();
+      
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -51,7 +62,10 @@ export const Contact = () => {
           </div>
         </div>
 
-        <form ref={form} onSubmit={sendEmail} className="contact-form">
+        <form ref={formRef} onSubmit={sendEmail} className="contact-form" name='contact' method="POST" data-netlify="true" netlify-honeypot="bot-fiel">
+
+          <input type="hidden" name='form-name' value="contact" hidden />
+
           <h3>Send a Message</h3>
           <input type="text" name="name" placeholder="Your name" required />
           <input type="email" name="email" placeholder="Email" required />
