@@ -1,6 +1,6 @@
 import Notfoundimage from '@/assets/notfoundimage.png'; 
 import astronautspace from '@/assets/astronautspace.gif'; 
-import './NotFound.css';
+import './Notfound.css';
 
 
 function NotFound() {
