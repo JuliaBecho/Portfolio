@@ -9,7 +9,7 @@ function encode(data) {
 }
 
 export const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef(null);
 
   const sendEmail = async (e) => {
      e.preventDefault();
@@ -35,7 +35,7 @@ export const Contact = () => {
       });
 
       form.reset();
-      
+
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -62,9 +62,9 @@ export const Contact = () => {
           </div>
         </div>
 
-        <form ref={formRef} onSubmit={sendEmail} className="contact-form" name='contact' method="POST" data-netlify="true" netlify-honeypot="bot-fiel">
+        <form ref={formRef} onSubmit={sendEmail} className="contact-form" name='contact' method="POST" data-netlify="true" netlify-honeypot="bot-field">
 
-          <input type="hidden" name='form-name' value="contact" hidden />
+          <input type="hidden" name='form-name' value="contact" />
 
           <h3>Send a Message</h3>
           <input type="text" name="name" placeholder="Your name" required />
