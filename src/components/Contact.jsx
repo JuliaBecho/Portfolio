@@ -23,7 +23,7 @@ export const Contact = () => {
       await fetch("/", {
         method: "POST",
         headers: {
-          "Content-type": "applications/x-www-form-utlencoded",
+          "Content-type": "applications/x-www-form-urlencoded",
         },
         body: encode({"form-name":"contact", ...data})
       })
