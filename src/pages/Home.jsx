@@ -10,6 +10,7 @@ import { useTheme } from '@/contexts/ThemeContext';
 import BubbleBackground from '../components/bubblesBackground';
 import AboutMe from '../components/AboutMe';
 import Skills from "@/components/Skills"
+import Projects from '../components/Project';
 
 
 function Home() {
@@ -59,6 +60,7 @@ function Home() {
 
       <AboutMe/>
       <Skills/>
+      <Projects></Projects>
      <Contact></Contact>
 
     </div>

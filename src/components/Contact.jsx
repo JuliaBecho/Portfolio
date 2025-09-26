@@ -46,7 +46,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="contact-section">
+    <section id='contact' className="contact-section">
       <h2 className="contact-title">Get in <span>Touch</span></h2>
       <div className="contact-container">
         <div className="contact-info">
