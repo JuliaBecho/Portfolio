@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 import Swal from 'sweetalert2';
-import axios from 'axios';
-import './Contact.css'; // CSS separado
+
+import './Contact.css';
 
 function encode(data) {
   return new URLSearchParams(data).toString();
@@ -12,12 +11,11 @@ export const Contact = () => {
   const formRef = useRef(null);
 
   const sendEmail = async (e) => {
-     e.preventDefault();
+    e.preventDefault();
 
-     const form = formRef.current;
-     const formData = new FormData(form);
-     const data = Object.fromEntries(formData.entries());
-
+    const form = formRef.current;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
     try {
       await fetch("/", {
@@ -25,7 +23,7 @@ export const Contact = () => {
         headers: {
           "Content-type": "applications/x-www-form-urlencoded",
         },
-        body: encode({"form-name":"contact", ...data})
+        body: encode({ "form-name": "contact", ...data })
       })
 
       Swal.fire({
@@ -37,6 +35,7 @@ export const Contact = () => {
       form.reset();
 
     } catch (error) {
+      console.error("Error sending email:", error);
       Swal.fire({
         icon: "error",
         title: "Oops...",

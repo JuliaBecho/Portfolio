@@ -19,7 +19,7 @@ function Skills() {
 
   const [activeCategory, setActiveCategory] = useState("all");
 
-  const filtredSkills = skills.filter((skill)=> {
+  const filtredSkills = skills.filter((skill) => {
     return activeCategory === "all" || skill.category === activeCategory
   })
 
@@ -35,12 +35,12 @@ function Skills() {
 
         <div className="flex flex-wrap justify-center gap-6 mb-16">
           {
-            categories.map((category, key)=>(
-                <button key={key}
+            categories.map((category, key) => (
+              <button key={key}
                 onClick={() => setActiveCategory(category)}
-                >
-                    {category}
-                </button>
+              >
+                {category}
+              </button>
             ))
           }
         </div>
@@ -73,9 +73,8 @@ function Skills() {
                     strokeWidth="3"
                     strokeLinecap="round"
                     className="ground-hover:stroke-blue-300 transition-all duration-300"
-                    strokeDasharray={`${skill.level * 2.83} ${
-                      (100 - skill.level) * 2.83
-                    }`}
+                    strokeDasharray={`${skill.level * 2.83} ${(100 - skill.level) * 2.83
+                      }`}
                     style={{
                       filter: "drop-shadow(0 0 6px rgba(59, 130,256,0.4))",
                     }}
@@ -91,12 +90,12 @@ function Skills() {
                     {skill.level}%
                   </span>
                 </div>
-                
-              <div className="absolute inset-0 rounded-full bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
+
+                <div className="absolute inset-0 rounded-full bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
               </div>
 
-              
+
             </div>
 
 

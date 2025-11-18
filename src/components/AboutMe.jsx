@@ -1,4 +1,5 @@
 import { Code, Briefcase, Camera } from "lucide-react";
+
 import alien from "@/assets/alien.png";
 import shark from "@/assets/shark.png";
 
