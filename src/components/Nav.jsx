@@ -1,24 +1,45 @@
 
+import { useState } from 'react';
 import './Nav.css'
-import sun from "@/assets/sun.png";
 import { ThemeToggle } from './ThemeToggle';
 
 export default function Nav() {
-return(
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  return (
     <nav className="nav">
-          <h1 className="logo">Julia Becho <span className="highlight">Portfolio</span></h1>
-          <div className="nav-links">
-            <a href="/">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Project</a>
-            <a href="#contact"><span className="highlight">Contact</span></a>
-           {/* <a href="#"><img src={sun} alt="Sun" className="button-img" /></a> */}
-            <ThemeToggle/>
-          </div>
-        </nav>
+      <h1 className="logo">Julia Becho <span className="highlight">Portfolio</span></h1>
 
-)}
+      {/* Botão hambúrguer para mobile */}
+      <button
+        className={`hamburger ${isMenuOpen ? 'open' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
+      <div className={`nav-links ${isMenuOpen ? 'nav-links-mobile' : ''}`}>
+        <a href="#" onClick={closeMenu}>Home</a>
+        <a href="#" onClick={closeMenu}>About</a>
+        <a href="#" onClick={closeMenu}>Skills</a>
+        <a href="#" onClick={closeMenu}>Project</a>
+        <a href="#" onClick={closeMenu}><span className="highlight">Contact</span></a>
+        <ThemeToggle />
+      </div>
 
+      {/* Overlay para fechar o menu ao clicar fora */}
+      {isMenuOpen && <div className="nav-overlay" onClick={closeMenu}></div>}
+    </nav>
+  )
+}

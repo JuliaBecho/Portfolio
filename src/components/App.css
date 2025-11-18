@@ -1,9 +1,9 @@
 .app {
-  
+
   background-size: cover;
   min-height: 100vh;
   padding-top: 2rem;
- 
+
 }
 
 .intro-section {
@@ -45,7 +45,14 @@
   0%, 100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column-reverse;
   }
 }
