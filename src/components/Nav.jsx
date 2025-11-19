@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import './Nav.css'
-import { ThemeToggle } from './ThemeToggle';
+import { ThemeToggle, ThemeToggleMobile } from './ThemeToggle';
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +17,9 @@ export default function Nav() {
   return (
     <nav className="nav">
       <h1 className="logo">Julia Becho <span className="highlight">Portfolio</span></h1>
+
+      {/* Theme toggle para desktop - fixo no canto superior direito */}
+      <ThemeToggle />
 
       {/* Botão hambúrguer para mobile */}
       <button
@@ -35,7 +38,9 @@ export default function Nav() {
         <a href="#skills" onClick={closeMenu}>Skills</a>
         <a href="#projects" onClick={closeMenu}>Projects</a>
         <a href="#contact" onClick={closeMenu}>Contact</a>
-        <ThemeToggle />
+
+        {/* Theme toggle para mobile - dentro do menu */}
+        <ThemeToggleMobile onClick={closeMenu} />
       </div>
 
       {/* Overlay para fechar o menu ao clicar fora */}
