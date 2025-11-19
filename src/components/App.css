@@ -69,4 +69,8 @@
   .intro-section {
     flex-direction: column-reverse;
   }
+
+  .intro-text {
+    text-align: center;
+  }
 }
