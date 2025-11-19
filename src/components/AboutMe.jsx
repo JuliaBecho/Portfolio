@@ -1,9 +1,27 @@
 import { Code, Briefcase, Camera } from "lucide-react";
 
+import { useTheme } from '@/contexts/ThemeContext';
+
 import alien from "@/assets/alien.png";
 import shark from "@/assets/shark.png";
 
 function AboutMe() {
+
+  const { theme } = useTheme();
+
+  function showAlienOrSkark() {
+    const src = theme === "dark" ? alien : shark;
+    const alt = theme === "dark" ? "alien" : "shark";
+
+    return <img src={src} alt={alt} width={250} className="mx-auto"
+      style={
+        {
+          animation: theme === "dark" ? "float 3s ease-in-out infinite" : "swim 3s ease-in-out infinite"
+        }
+      }
+    />
+  }
+
   return (
     <section id="about" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
@@ -12,8 +30,8 @@ function AboutMe() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">Passionate Web Developer</h3>
+          <div className="space-y-6 text-lg" >
+            <h3 className="text-4xl font-semibold">Passionate Web Developer</h3>
             <p className="text-muted-foreground">
               Hi! I'm Julia Becho, a passionate web developer with a strong
               focus on front-end technologies. I graduated in Full Stack Web
@@ -35,21 +53,8 @@ function AboutMe() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6">
-            {/* Alien (aparece apenas no modo escuro) */}
-            <img
-              src={alien}
-              alt="alien"
-              width={250}
-              className="mx-auto hidden dark:block"
-            />
 
-            {/* Tubarão (aparece apenas no modo claro / fundo branco) */}
-            <img
-              src={shark}
-              alt="shark"
-              width={250}
-              className="mx-auto block dark:hidden"
-            />
+            {showAlienOrSkark()}
 
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
@@ -57,8 +62,8 @@ function AboutMe() {
                   <Code className="h-6 w-6 text-blue-400" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="font-semibold text-xl">Web Development</h4>
+                  <p className="text-muted-foreground text-lg">
                     Creating responsive websites with modern frameworks
                   </p>
                 </div>
@@ -71,8 +76,8 @@ function AboutMe() {
                   <Briefcase className="h-6 w-6 text-blue-400" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI UX Desing</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="font-semibold text-xl">UI UX Desing</h4>
+                  <p className="text-muted-foreground text-lg">
                     Desing intuitive user interfaces and semless user experience
                   </p>
                 </div>
@@ -85,8 +90,8 @@ function AboutMe() {
                   <Camera className="h-6 w-6 text-blue-400" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Photograpy</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="font-semibold text-xl">Photograpy</h4>
+                  <p className="text-muted-foreground text-lg">
                     Creating responsive websites with modern frameworks
                   </p>
                 </div>

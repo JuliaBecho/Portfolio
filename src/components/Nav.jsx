@@ -31,10 +31,10 @@ export default function Nav() {
 
       <div className={`nav-links ${isMenuOpen ? 'nav-links-mobile' : ''}`}>
         <a href="#" onClick={closeMenu}>Home</a>
-        <a href="#" onClick={closeMenu}>About</a>
-        <a href="#" onClick={closeMenu}>Skills</a>
-        <a href="#" onClick={closeMenu}>Project</a>
-        <a href="#" onClick={closeMenu}><span className="highlight">Contact</span></a>
+        <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#skills" onClick={closeMenu}>Skills</a>
+        <a href="#projects" onClick={closeMenu}>Projects</a>
+        <a href="#contact" onClick={closeMenu}>Contact</a>
         <ThemeToggle />
       </div>
 

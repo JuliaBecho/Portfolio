@@ -4,8 +4,8 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Titulo legal do meu projeto",
-      description: "description",
+      title: "Pawtner",
+      description: "A pet platform for pets in need.",
       image: "/projects/Pawtner.png",
       tags: ["react", "TailwindCSS", "firebase"],
       demoUrl: "#",
@@ -19,7 +19,7 @@ function Projects() {
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Featured <span className="text-blue-400">Projects</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg">
           Here are some of my recent projects. Each project was carefully
           crafted with attention to detail, performance, and user experience
         </p>

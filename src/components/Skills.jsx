@@ -33,7 +33,7 @@ function Skills() {
           My <span className="text-blue-400">Skills</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-6 mb-16">
+        <div className="flex flex-wrap justify-center gap-6 mb-16 text-lg">
           {
             categories.map((category, key) => (
               <button key={key}

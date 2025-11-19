@@ -18,6 +18,7 @@ import '@/components/App.css';
 
 function Home() {
   const { theme } = useTheme();
+
   return (
     <div className="app min-h-screen bg-background text-foreground overflow-x-hidden">
       {theme === "light" ? <BubbleBackground /> : <StarBackground />}
@@ -27,12 +28,12 @@ function Home() {
       <main className="intro-section">
         <div className="intro-text">
           <h1>Hi, I'm <span className="highlight">Julia</span> Becho</h1>
-          <h2>Full-Stack Developer with a Passion for <span className='highlight'>
+          <h2>Full-Stack Developer with a big passion for <span className='highlight'>
             <Typewriter
               words={[
-                "UX/UI desing",
+                "UX/UI Desing",
                 "Front-end Development",
-                "Web performace"
+                "Web Performance"
               ]}
               loop={0}
               cursor
@@ -44,13 +45,15 @@ function Home() {
           </span></h2>
         </div>
 
-        {
-          theme === "dark" ? (
-            <img src={astronauta} alt="Astronauta" className="hero-img" />
-          ) : (
-            <img src={jellyfish} alt="jellyfish" className="hero-img light" />
-          )
-        }
+        <div>
+          {
+            theme === "dark" ? (
+              <img src={astronauta} alt="Astronauta" className="hero-img" />
+            ) : (
+              <img src={jellyfish} alt="jellyfish" className="hero-img light" />
+            )
+          }
+        </div>
       </main>
 
       <AboutMe />
